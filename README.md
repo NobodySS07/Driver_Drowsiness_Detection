@@ -22,7 +22,7 @@ This repository contains code for a Driver Drowsiness Detection System that uses
 
 ## Dataset
 
-The VGG16-based image classification model was trained on a multiracial dataset sourced from Kaggle. The dataset contains around 9000 images, each labeled as drowsy or non-drowsy.
+The VGG16-based image classification model was trained on a multiracial dataset sourced from Kaggle. The dataset contains around 9000 images, each labeled as Active and Fatigue Subjects.
 
 [Link to Dataset](https://www.kaggle.com/datasets/rakibuleceruet/drowsiness-prediction-dataset)
 
