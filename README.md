@@ -1,6 +1,6 @@
 # Driver Drowsiness Detection System
 
-![Demo](demogif_zE9nIhUR.mp4)
+![Demo](https://github.com/NobodySS07/Driver_Drowsiness_Detection/blob/main/demogif_zE9nIhUR.mp4)
 
 This repository contains code for a Driver Drowsiness Detection System that uses computer vision techniques and deep learning models to detect drowsiness in drivers.
 
