@@ -27,14 +27,18 @@ The VGG16-based image classification model was trained on a multiracial dataset 
 
 [Link to Dataset](https://www.kaggle.com/datasets/rakibuleceruet/drowsiness-prediction-dataset)
 
+## VGG16-based image classification model
+
+[Link to Model](https://drive.google.com/file/d/1zyOEzHi1LVrZCeqVdtF9yn7ARYQrtsOt/view?usp=drive_link)
 ## Usage
 
 1. Clone this repository:
    ```bash
    git clone https://github.com/your-username/driver-drowsiness-detection.git
-2. Install the required dependencies. You can use pip to install them:
+2. Download my_model.h5 from the given link and paste it in root folder. 
+3. Install the required dependencies. You can use pip to install them:
    ```bash
    pip install -r requirements.txt
-3. Run the main script to start the drowsiness detection system:
+4. Run the main script to start the drowsiness detection system:
    ```bash
    python main.py
