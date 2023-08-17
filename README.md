@@ -2,32 +2,38 @@
 
 ![Demo](demo.gif)
 
-## Overview
+This repository contains code for a Driver Drowsiness Detection System that uses computer vision techniques and deep learning models to detect drowsiness in drivers.
 
-This repository contains the implementation of a Driver Drowsiness Detection System using computer vision techniques. The system captures video from a webcam, processes it through various stages, and predicts whether the driver is drowsy or not based on facial features. The flow of the system is as follows:
+## System Flow
 
-1. **Webcam Input:** Captures live video stream from the webcam.
-2. **Video to Frames:** Converts the video stream into individual frames using OpenCV.
-3. **Face Detection:** Utilizes OpenCV's ResNet-based `.caffemodel` to detect faces in the frames.
-4. **Cropped Faces:** Extracts cropped face images from the frames.
-5. **Drowsiness Classification:** Employs a VGG16-based image classification model to predict drowsiness or alertness.
-6. **Result:** The system outputs real-time drowsiness alerts based on the predictions.
+1. **Dash Cam Video Capture:** The system captures the driver's video feed using a dash cam.
+
+2. **Video to Frames:** OpenCV is used to extract frames from the video stream. Each frame is treated as an individual image.
+
+3. **Face Detection:** The extracted frames are processed through a pre-trained ResNet .caffemodel for face detection using OpenCV. This detects and localizes faces in the frames.
+
+4. **Cropped Faces:** The faces detected in the frames are cropped and isolated as individual face images.
+
+5. **Drowsiness Classification:** The cropped face images are passed through a VGG16-based image classification model. This model was trained on a diverse dataset containing approximately 9000 images with drowsy and non-drowsy labels. The model predicts whether the driver's face is showing signs of drowsiness or not.
+
+6. **Performance Enhancement:** Initially, the VGG16 model achieved an accuracy of 85%. However, by using cropped face images, the performance was significantly improved, achieving almost 100% accuracy.
+
+7. **Real-time Processing:** The entire system operates in real-time, with a processing speed of approximately 17 frames per second on a 20 frames per second video feed when running on a CPU.
 
 ## Dataset
 
-The VGG16 model used in this system was trained on a multiracial dataset obtained from Kaggle. The dataset consists of approximately 9000 images categorized as drowsy and non-drowsy images.
+The VGG16-based image classification model was trained on a multiracial dataset sourced from Kaggle. The dataset contains around 9000 images, each labeled as drowsy or non-drowsy.
 
-**Dataset Link:** [Add Dataset Link Here]
-
-## Requirements
-
-- Python 3.x
-- OpenCV (`pip install opencv-python`)
-- Other necessary libraries (Numpy, etc.)
+[Link to Dataset](insert_dataset_link_here)
 
 ## Usage
 
-1. Clone the repository:
+1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/drowsiness-detection.git
-   cd drowsiness-detection
+   git clone https://github.com/your-username/driver-drowsiness-detection.git
+2. Install the required dependencies. You can use pip to install them:
+   ```bash
+   pip install -r requirements.txt
+3. Run the main script to start the drowsiness detection system:
+   ```bash
+   python main.py
